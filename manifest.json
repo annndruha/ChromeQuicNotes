@@ -1,0 +1,22 @@
+{
+  "name": "QuickNotes",
+  "description": "Extension for quick copy saved notes to clipboard",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "minimum_chrome_version": "96",
+  "icons":{
+    "96" : "images/baseline_sticky_note_2_black_48dp.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "QuickNotes",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": ["<all_urls>"]
+}

@@ -1,0 +1,13 @@
+#frame {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.note {
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+}
