@@ -1,6 +1,6 @@
 chrome.contextMenus.create({
         'id': '7Ed2x9MAFz3dgdJkBsuS3UrX',
-        "title": 'Add node: %s',
+        "title": 'Add to notes',
         'type': 'normal',
         'contexts': ['selection']
     }, () => {}
@@ -13,7 +13,6 @@ chrome.contextMenus.onClicked.addListener(
 
             let json = {}
             json[idx] = info.selectionText
-            console.log('json: ', json)
             chrome.storage.sync.set(json, (res)=> {
                 console.log('json set', res)
             })

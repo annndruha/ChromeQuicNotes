@@ -1,13 +1,44 @@
 #frame {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-width: 600px;
+    min-height: 400px;
+    font-size: medium;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     cursor: pointer;
+    background-color: #eee;
+    border-radius: 10px;
+    max-height: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.item:hover{
+    background-color: #ddd;
+}
+
+.note_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .note {
-    cursor: pointer;
+
 }
 
-.button {
+
+#delete_all {
     cursor: pointer;
+    background-color: #fa7372;
+}
+
+#delete_all:hover{
+    background-color: #dc0705;
 }
