@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-    chrome.storage.sync.get(null, function (res) {
+    chrome.storage.sync.get(null,  (res) => {
 
         for (let [key, value] of Object.entries(res)) {
-            let note = document.createElement('span')
-            note.innerText = value
-            note.className = 'note_text'
-
             let icon_copy = document.createElement('img')
             icon_copy.src = 'images/copy.svg'
             icon_copy.className = 'icon_copy'
 
+            let note_text = document.createElement('span')
+            note_text.innerText = value
+            note_text.className = 'note_text'
+
             let note_group = document.createElement('div')
             note_group.className = 'half-left'
             note_group.appendChild(icon_copy)
-            note_group.appendChild(note)
+            note_group.appendChild(note_text)
 
             let icon_delete = document.createElement('img')
             icon_delete.src = 'images/delete.svg'
@@ -40,7 +40,7 @@ function addListener() {
     $('.note').on('click', function (e) {
         e.stopPropagation()
         e.preventDefault()
-        navigator.clipboard.writeText(e.target.innerText)
+        navigator.clipboard.writeText(e.target.innerText).then(() => {})
         window.close()
     })
 

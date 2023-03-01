@@ -11,14 +11,13 @@ chrome.contextMenus.removeAll(() => {
 
 chrome.contextMenus.onClicked.addListener(
     (info, tab) => {
-        chrome.storage.sync.get(null, (res) => {
-            let idx = (new Date().getTime()).toString(36)
+        let idx = (new Date().getTime()).toString(36)
 
-            let json = {}
-            json[idx] = info.selectionText
-            chrome.storage.sync.set(json, (res) => {
-                console.log('json set', res)
-            })
+        let json = {}
+        json[idx] = info.selectionText
+        chrome.storage.sync.set(json, (res) => {
+            console.log('json set', res)
         })
+
     }
 )
