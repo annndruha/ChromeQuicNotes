@@ -5,22 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
             let note = document.createElement('span')
             note.innerText = value
             note.className = 'note_text'
-            let note_group = document.createElement('div')
-            note_group.className = 'half-left'
 
             let icon_copy = document.createElement('img')
-            icon_copy.src='images/copy.svg'
+            icon_copy.src = 'images/copy.svg'
             icon_copy.className = 'icon_copy'
 
+            let note_group = document.createElement('div')
+            note_group.className = 'half-left'
             note_group.appendChild(icon_copy)
             note_group.appendChild(note)
 
             let icon_delete = document.createElement('img')
-            icon_delete.src='images/delete.svg'
+            icon_delete.src = 'images/delete.svg'
             icon_delete.className = 'delete_note_button'
+
             let icons_group = document.createElement('div')
             icons_group.className = 'half-right'
-            // icons_group.appendChild(icon_copy)
             icons_group.appendChild(icon_delete)
 
             let note_container = document.createElement('div')
@@ -49,8 +49,10 @@ function addListener() {
         e.preventDefault()
         let key = e.target.parentElement.parentElement.id
         console.log('delete key: ', key)
-        chrome.storage.sync.remove([key], ()=>{
-            chrome.storage.sync.get(null,  (res) => {console.log(res)})
+        chrome.storage.sync.remove([key], () => {
+            chrome.storage.sync.get(null, (res) => {
+                console.log(res)
+            })
         })
         document.getElementById(key).remove()
     })
@@ -58,7 +60,8 @@ function addListener() {
     $('#delete_all').on('click', function (e) {
         e.stopPropagation()
         e.preventDefault()
-        chrome.storage.sync.clear(() =>{})
+        chrome.storage.sync.clear(() => {
+        })
         let parent = document.getElementById("header")
         parent.innerText = ''
     })
