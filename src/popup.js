@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function addListener() {
-    $('.item').on('click', function (e) {
+    $('.note').on('click', function (e) {
         e.stopPropagation()
         e.preventDefault()
         navigator.clipboard.writeText(e.target.innerText)
