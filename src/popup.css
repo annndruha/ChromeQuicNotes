@@ -2,12 +2,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 600px;
-    min-height: 400px;
+    min-width: 654px;
+    min-height: 416px;
     font-size: medium;
 }
 
-.item {
+.half-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    min-width: 30px;
+}
+
+
+.half-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+
+.note {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,28 +30,53 @@
     background-color: #eee;
     border-radius: 10px;
     max-height: 20px;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     margin: 5px;
 }
 
-.item:hover{
+.note:hover{
     background-color: #ddd;
 }
 
+.note:hover .delete_note_button{
+    display: block;
+}
+
 .note_text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*max-width: 550px;*/
+    width: 550px;
 }
 
-.note {
-
+.icon_copy{
+    margin-right: 5px;
 }
 
+.delete_note_button{
+    display: none;
+    margin-left: 5px;
+}
+
+.delete_note_button:hover{
+    background-color: #dc0705;
+    border-radius: 25%;
+}
 
 #delete_all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     cursor: pointer;
-    background-color: #fa7372;
+    background-color: #eee;
+    border-radius: 10px;
+    max-height: 20px;
+    padding: 10px 10px 10px 10px;
+    margin: 5px;
 }
 
 #delete_all:hover{
