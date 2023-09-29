@@ -42,6 +42,10 @@
     display: block;
 }
 
+.note:hover .edit_note_button{
+    display: block;
+}
+
 .note_text {
     /*display: flex;*/
     /*flex-direction: column;*/
@@ -56,6 +60,16 @@
 .icon_copy{
     margin-right: 5px;
 }
+
+.edit_note_button{
+    display: none;
+    margin-left: 5px;
+}
+
+.edit_note_button:hover{
+    border-radius: 25%;
+}
+
 
 .delete_note_button{
     display: none;

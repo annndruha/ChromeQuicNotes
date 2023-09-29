@@ -14,10 +14,9 @@ chrome.contextMenus.onClicked.addListener(
         let idx = (new Date().getTime()).toString(36)
 
         let json = {}
-        json[idx] = info.selectionText
-        chrome.storage.sync.set(json, (res) => {
+        json[idx] = {'tab_idx': 0, order_idx: 0, 'label': info.selectionText, 'value': info.selectionText}
+        chrome.storage.sync.set({idx: json}, (res) => {
             console.log('json set', res)
         })
-
     }
 )
