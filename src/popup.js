@@ -83,9 +83,13 @@ function addListener() {
         e.stopPropagation()
         e.preventDefault()
         let key = e.target.parentElement.parentElement.id
-        chrome.storage.sync.get([key], (node) => {
-            node[key]['label'] = 'test'
-            chrome.storage.sync.set(node, (res) => {console.log('Update key=', key,' :', res)})
+
+
+        chrome.storage.sync.get([key], (note) => {
+//            let note_span = document.getElementById(key).getElementsByClassName("note_text")
+//            note_span.innerHTML = '<input type="text" name="input" value="Type here" />'
+            note[key]['label'] = 'test'
+//            chrome.storage.sync.set(note, (res) => {console.log('Update key=', key,' :', res)})
         })
     })
 

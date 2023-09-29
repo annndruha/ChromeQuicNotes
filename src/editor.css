@@ -1,0 +1,24 @@
+#editor {
+    background: black;
+    opacity: 0.4;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.flex_row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.flex_col {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: col;
+}
