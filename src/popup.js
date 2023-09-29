@@ -75,8 +75,7 @@ function addListener() {
         e.stopPropagation()
         e.preventDefault()
         let key = e.target.parentElement.parentElement.id
-        console.log('delete key: ', key)
-        chrome.storage.sync.remove([key], () => {})
+        chrome.storage.sync.remove([key], () => {console.log('Remove key: ', key)})
         document.getElementById(key).remove()
     })
 
@@ -85,23 +84,15 @@ function addListener() {
         e.preventDefault()
         let key = e.target.parentElement.parentElement.id
         chrome.storage.sync.get([key], (node) => {
-            console.log(node)
             node[key]['label'] = 'test'
-            console.log(node)
-//            let json = {}
-//            json[key] = {'tab_idx': 0, order_idx: 0, 'label': info.selectionText, 'value': info.selectionText}
-//            chrome.storage.sync.set(node[key], (res) => {
-//                console.log('json set', res)
-//            })
+            chrome.storage.sync.set(node, (res) => {console.log('Update key=', key,' :', res)})
         })
-//        document.getElementById(key).remove()
     })
 
     $('#delete_all').on('click', function (e) {
         e.stopPropagation()
         e.preventDefault()
-        chrome.storage.sync.clear(() => {
-        })
+        chrome.storage.sync.clear(() => {console.log('Removed all keys.')})
         let parent = document.getElementById("header")
         parent.innerText = ''
     })
