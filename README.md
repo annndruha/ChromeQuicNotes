@@ -1,5 +1,7 @@
 # ChromeQuickNotes [In progress]
 
+# Чекай ветку labels
+
 Extension for quick copy saved notes to clipboard
 
 * Добавить подписи
