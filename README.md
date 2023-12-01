@@ -1,10 +1,7 @@
 # ChromeQuickNotes [In progress]
 
-# Чекай ветку labels
+Extension for quick copy saved notes to clipboard.
 
-Extension for quick copy saved notes to clipboard
-
-* Добавить подписи
-* Переписать на bootstrap
-* Добавить вкладки
-* Добавить в контекстное меню выбор вкладки
+Just right click to text and press "Add to notes",
+then click on extension icon and click at line need to copy,
+Wow! Content in clipboard!
