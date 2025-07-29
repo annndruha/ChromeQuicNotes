@@ -1,8 +1,3 @@
-# ChromeQuickNotes [In progress]
-
-
-
-
 # ChromeQuickNotes - Chrome extention
 
 ![version](https://img.shields.io/github/v/release/Annndruha/ChromeQuicNotes)
