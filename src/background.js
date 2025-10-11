@@ -14,7 +14,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     let idx = new Date().getTime().toString(36)
 
     let json = {}
-    json[idx] = info.selectionText
+    json[idx] = "No comment" + "||||abs_rand_string||||" + info.selectionText
     chrome.storage.sync.set(json, (res) => {
         console.log('json set', res)
     })

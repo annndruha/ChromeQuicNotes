@@ -21,6 +21,13 @@
     justify-content: start;
 }
 
+.note:hover .note_text {
+    display: flex;
+}
+
+.note:hover .comment {
+    display: none;
+}
 
 .note {
     display: flex;
@@ -42,14 +49,16 @@
     display: block;
 }
 
+.note:hover .edit_note_button{
+    display: block;
+}
+
 .note_text {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
+    display: none;
     white-space: nowrap;
+    color: #787777;
     text-overflow: ellipsis;
     overflow: hidden;
-    /*max-width: 550px;*/
     width: 550px;
 }
 
@@ -63,8 +72,60 @@
 }
 
 .delete_note_button:hover{
-    background-color: #dc0705;
+    background-color: #ff4643;
     border-radius: 25%;
+}
+
+.modal_dialog {
+    border: none;
+    border-radius: 10px;
+}
+
+.edit_note_button{
+    display: none;
+    margin-left: 5px;
+}
+
+.edit_note_button:hover{
+    background-color: #00ff8c;
+    border-radius: 25%;
+}
+
+.edit_fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.edit_button {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    margin: 5px;
+    border: none;
+}
+
+.edit_button:hover {
+    cursor: pointer;
+    background-color: #6f6f6f;
+}
+
+.edit_button_apply:hover {
+    background-color: #00ff8c;
+}
+
+.edit_input {
+    background-color: #eee;
+    border-radius: 10px;
+    max-height: 25px;
+    padding: 10px 10px 10px 10px;
+    margin: 5px;
+    border: none;
 }
 
 #delete_all {
@@ -74,11 +135,11 @@
     cursor: pointer;
     background-color: #eee;
     border-radius: 10px;
-    max-height: 20px;
+    max-height: 25px;
     padding: 10px 10px 10px 10px;
     margin: 5px;
 }
 
 #delete_all:hover{
-    background-color: #dc0705;
+    background-color: #ff4643;
 }

@@ -16,6 +16,36 @@
             <img src="images/delete.svg" alt="" draggable="false">
         </div>
     </div>
+    <dialog class="modal_dialog" id="edit_dialog" style="width: 400px">
+        <div class="edit_fields">
+            <input
+                type="text"
+                name="field"
+                autocomplete="off"
+                class="edit_input"
+                id="new-comment"
+                placeholder="Comment"
+            />
+            <input
+                type="text"
+                name="field"
+                autocomplete="off"
+                class="edit_input"
+                id="new-value"
+                placeholder="Value to copy"
+            />
+        </div>
+
+        <div id="edit_id" style="display: none;"></div>
+        <div class="edit_buttons">
+            <button class="edit_button" id="edit_discard">
+                Discard
+            </button>
+            <button class="edit_button edit_button_apply" id="edit_apply">
+                Apply
+            </button>
+        </div>
+    </dialog>
 </div>
 </body>
 <script type="text/javascript" src="src/jquery-3.6.0.min.js"></script>
